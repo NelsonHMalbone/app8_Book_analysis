@@ -4,6 +4,7 @@ import regex as re
 with open('miracle_in_the_andes.txt', 'r', encoding="UTF-8") as file:
     book = file.read()
 
+
 def find(w):
     patterns = re.compile("[a-zA-Z]+")
     findings = re.findall(patterns, book.lower())
@@ -18,6 +19,7 @@ def find(w):
         return d[w]
     except:
         return f'The book does not contain the word {w}'
+
 
 w = input("see how many times a word is used or said: ")
 
